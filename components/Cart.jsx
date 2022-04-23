@@ -12,10 +12,10 @@ function Cart() {
   const cartRef = useRef();
   const { totalPrice, totalQuantity, cartItems, setShowCart, toggleCartItemQuanity, onRemove } = useStateContext();
 
-  const handleCheckout = async () =>{
+  const handleCheckout = async () => {
     const stripe = await getStripe();
 
-    const response = await fetch(urlFor('/api/stripe'), {
+    const response = await fetch('/api/stripe', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -23,17 +23,16 @@ function Cart() {
       body: JSON.stringify(cartItems),
     });
 
-    if(response.statusCode === 500) {
+    if (response.statusCode === 500) {
       toast.error('Error processing payment');
-      return;
+      return
     }
 
     const data = await response.json();
 
     toast.loading('Redirecting...');
 
-    stripe.redirectToCheckout({ sessionId: data.sessionId });
-
+    stripe.redirectToCheckout({ sessionId: data.id });
   };
 
   return (
