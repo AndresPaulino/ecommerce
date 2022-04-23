@@ -7,7 +7,7 @@ function Layout({ children }) {
   return (
     <div className='layout'>
       <Head>
-        <title>BassBoost Headphones</title>
+        <title>HyperBoost x Headphones</title>
       </Head>
       <header>
         <NavBar />

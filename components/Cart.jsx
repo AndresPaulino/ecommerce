@@ -12,7 +12,7 @@ function Cart() {
   const cartRef = useRef();
   const { totalPrice, totalQuantity, cartItems, setShowCart, toggleCartItemQuanity, onRemove } = useStateContext();
 
-  const handleCheckout = () => {
+  const handleCheckout = async () =>{
     const stripe = await getStripe();
 
     const response = await fetch(urlFor('/api/stripe'), {
