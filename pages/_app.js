@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <StateContext>
       <Layout>
-        <Toast />
+        <Toaster />
         <Component {...pageProps} />
       </Layout>
     </StateContext>
