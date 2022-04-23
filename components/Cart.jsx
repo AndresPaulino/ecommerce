@@ -9,7 +9,7 @@ import { urlFor } from '../lib/client';
 
 function Cart() {
   const cartRef = useRef();
-  const { totalPrice, totalQuantity, cartItems, setShowCart } = useStateContext();
+  const { totalPrice, totalQuantity, cartItems, setShowCart, toggleCartItemQuanity } = useStateContext();
 
   return (
     <div className='cart-wrapper' ref={cartRef}>
@@ -45,11 +45,11 @@ function Cart() {
                   <div className='flex bottom'>
                     <div>
                       <p className='quantity-desc'>
-                        <span className='minus' onClick=''>
+                        <span className='minus' onClick={() => toggleCartItemQuanity(item._id, 'dec')}>
                           <AiOutlineMinus />
                         </span>
-                        <span className='num'>0</span>
-                        <span className='plus' onClick=''>
+                        <span className='num'>{item.quantity}</span>
+                        <span className='plus' onClick={() => toggleCartItemQuanity(item._id, 'inc')}>
                           <AiOutlinePlus />
                         </span>
                       </p>
@@ -62,15 +62,19 @@ function Cart() {
               </div>
             ))}
         </div>
-        {cartItems.length >= 1 && <div className='cart-bottom'>
-          <div className="total">
-            <h3>Subtotal:</h3>
-            <h3>${totalPrice}</h3>
+        {cartItems.length >= 1 && (
+          <div className='cart-bottom'>
+            <div className='total'>
+              <h3>Subtotal:</h3>
+              <h3>${totalPrice}</h3>
+            </div>
+            <div className='btn-container'>
+              <button type='button' className='btn' onClick=''>
+                Pay with stripe
+              </button>
+            </div>
           </div>
-          <div className="btn-container">
-            <button type='button' className='btn' onClick=''>Pay with stripe</button>
-          </div>
-        </div>}
+        )}
       </div>
     </div>
   );
