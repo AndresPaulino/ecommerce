@@ -10,8 +10,11 @@ export const StateContext = ({ children }) => {
   const [totalQuantity, setTotalQuantity] = useState(0);
   const [qty, setQty] = useState(1);
 
+  let foundProduct;
+  let index;
+
   const onAdd = (product, quantity) => {
-    const checkProductInCart = cartItems.find((item) => item.product._id === product._id);
+    const checkProductInCart = cartItems.find((item) => item._id === product._id);
 
     if (checkProductInCart) {
       setTotalPrice((previousTotalPrice) => previousTotalPrice + product.price * quantity);
@@ -27,6 +30,22 @@ export const StateContext = ({ children }) => {
       setCartItems([...cartItems, { ...product }]);
     }
     toast.success(`${qty} ${product.name} added to cart.`);
+  };
+
+  const toggleCartItemQuanity = (id, value) => {
+    foundProduct = cartItems.find((item) => item._id === id);
+    index = cartItems.findIndex((product) => product._id === id);
+
+    if (value === 'inc') {
+      setCartItems([...cartItems, { ...foundProduct, quantity: foundProduct.quantity + 1 }]);
+      setTotalPrice((previousTotalPrice) => previousTotalPrice + foundProduct.price);
+      setTotalQuantity((previousTotalQuantity) => previousTotalQuantity + 1);
+    } else if (value === 'dec') {
+      if (foundProduct.quantity > 1) {
+      setCartItems([...cartItems, { ...foundProduct, quantity: foundProduct.quantity - 1 }]);
+      setTotalPrice((previousTotalPrice) => previousTotalPrice - foundProduct.price);
+      setTotalQuantity((previousTotalQuantity) => previousTotalQuantity - 1);
+    }
   };
 
   const incQty = () => {
