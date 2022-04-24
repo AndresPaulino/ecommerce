@@ -1,34 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## eCommerce Web Application Example
 
-## Getting Started
+This application was built using Next.js with Sanity server integration and Stripe for payments.
 
-First, run the development server:
+## IMPORTANT: Completing Payments
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+This application has functioning payment processing using Stripe. Please do not use real credit card payment information. You are more than welcome to test out the payments by using the following credit card information
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Credit Card Information
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Card Number: 4242 4242 4242 4242
+Exp: 04/24
+CVV: 424
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+You can use any email and card name you wish.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Contact Me
 
-## Learn More
+Please feel free to contact me at info@andrespaulino.com or paulinoandresmiguel@gmail.com
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I am available for hire!
