@@ -44,7 +44,8 @@ You can use the Stripe payment checkout to test functionality.
 
 ## Tech Stack
 
-**Client:** Next.js, Solana, TailwindCSS, Stripe
+**Client:** Next.js, TailwindCSS
+**Server:** Sanity CMS, Stripe
 
 
 ## Acknowledgements
@@ -52,6 +53,7 @@ You can use the Stripe payment checkout to test functionality.
  - [README Editor](https://readme.so/editor)
  - [JavaScript Mastery](https://www.youtube.com/c/JavaScriptMastery)
  - [Stripe](https://stripe.com)
+ - [Sanity](https://www.sanity.io)
 
 ## Contact Me
 
