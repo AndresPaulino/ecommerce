@@ -9,6 +9,8 @@ An eCommerce web application to showcase responsive styling, product browsing, a
 ## 🚀 About Me
 I'm a passionate full stack developer with experience using the MERN stack. I love to create, find problems and come up with simple, yet powerful solutions.
 
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,sass,tailwind,bootstrap,express,react,figma,firebase,git,materialui,mysql,netlify,nodejs,ps,vscode)](https://skillicons.dev)
+
 
 ## Demo
 
